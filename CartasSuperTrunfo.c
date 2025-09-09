@@ -8,7 +8,7 @@ int main() {
     printf("Desafio cadastro das cartas:\n");
 
     // --- Declaração das variáveis para a primeira carta ---
-    char estado_carta1[3];       // Abreviatura do estado (ex: "SP")
+    char estado_carta1[3];
     char codigo_carta1[20];
     char nome_cidade_carta1[50];
     int populacao_carta1;
@@ -28,48 +28,48 @@ int main() {
     // --- Entrada de dados para a primeira carta ---
     printf("\n--- Insira os dados da primeira carta: ---\n");
     printf("Estado (ex: 'SP'): ");
-    scanf("%2s", estado_carta1);
+    scanf(" %2s", estado_carta1); // Espaço antes de %s
 
     printf("Codigo da cidade: ");
-    scanf("%19s", codigo_carta1);
+    scanf(" %19s", codigo_carta1); // Espaço antes de %s
 
     printf("Nome da cidade: ");
-    scanf("%49s", nome_cidade_carta1);
+    scanf(" %49[^\n]", nome_cidade_carta1); // Espaço antes e uma forma de ler a linha inteira
 
     printf("Populacao da cidade: ");
-    scanf("%d", &populacao_carta1);
+    scanf(" %d", &populacao_carta1); // Espaço antes de %d
 
     printf("Area em km^2: ");
-    scanf("%f", &area_km2_carta1);
+    scanf(" %f", &area_km2_carta1); // Espaço antes de %f
 
-    printf("PIB (em bilhoes de reais): "); // Adicionado o texto para guiar o usuário
-    scanf("%f", &pib_carta1);
+    printf("PIB (em bilhoes de reais): ");
+    scanf(" %f", &pib_carta1); // Espaço antes de %f
 
     printf("Numero de pontos turisticos: ");
-    scanf("%d", &pontos_turisticos_carta1);
+    scanf(" %d", &pontos_turisticos_carta1); // Espaço antes de %d
 
     // --- Entrada de dados para a segunda carta ---
     printf("\n--- Insira os dados da segunda carta: ---\n");
     printf("Estado (ex: 'RJ'): ");
-    scanf("%2s", estado_carta2);
+    scanf(" %2s", estado_carta2); // Espaço antes de %s
 
     printf("Codigo da cidade: ");
-    scanf("%19s", codigo_carta2);
+    scanf(" %19s", codigo_carta2); // Espaço antes de %s
 
     printf("Nome da cidade: ");
-    scanf("%49s", nome_cidade_carta2);
+    scanf(" %49[^\n]", nome_cidade_carta2); // Espaço antes e uma forma de ler a linha inteira
 
     printf("Populacao da cidade: ");
-    scanf("%d", &populacao_carta2);
+    scanf(" %d", &populacao_carta2); // Espaço antes de %d
 
     printf("Area em km^2: ");
-    scanf("%f", &area_km2_carta2);
+    scanf(" %f", &area_km2_carta2); // Espaço antes de %f
 
-    printf("PIB (em bilhoes de reais): "); // Adicionado o texto para guiar o usuário
-    scanf("%f", &pib_carta2);
+    printf("PIB (em bilhoes de reais): ");
+    scanf(" %f", &pib_carta2); // Espaço antes de %f
 
     printf("Numero de pontos turisticos: ");
-    scanf("%d", &pontos_turisticos_carta2);
+    scanf(" %d", &pontos_turisticos_carta2); // Espaço antes de %d
 
     // --- Exibição dos dados das cartas ---
     printf("\n\n--- Dados das Cartas Cadastradas ---\n");
@@ -80,7 +80,7 @@ int main() {
     printf("Cidade: %s\n", nome_cidade_carta1);
     printf("Populacao: %d\n", populacao_carta1);
     printf("Area: %.2f km^2\n", area_km2_carta1);
-    printf("PIB: %.2f bilhoes de reais\n", pib_carta1); // CORREÇÃO APLICADA AQUI
+    printf("PIB: %.2f bilhoes de reais\n", pib_carta1);
     printf("Pontos turisticos: %d\n", pontos_turisticos_carta1);
 
     printf("\nDados da segunda carta:\n");
@@ -89,7 +89,7 @@ int main() {
     printf("Cidade: %s\n", nome_cidade_carta2);
     printf("Populacao: %d\n", populacao_carta2);
     printf("Area: %.2f km^2\n", area_km2_carta2);
-    printf("PIB: %.2f bilhoes de reais\n", pib_carta2); // CORREÇÃO APLICADA AQUI
+    printf("PIB: %.2f bilhoes de reais\n", pib_carta2);
     printf("Pontos turisticos: %d\n", pontos_turisticos_carta2);
 
     return 0;
